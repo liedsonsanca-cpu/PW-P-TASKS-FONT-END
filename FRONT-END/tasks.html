@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>As minhas Tasks - API Tasks</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <div class="cartao cartao-largo">
+        <!-- Cabeçalho com nome do utilizador e botão de sair -->
+        <div class="cabecalho-tasks">
+            <h1>As minhas tasks</h1>
+            <div style="display: flex; gap: 0.6rem; align-items: center;">
+                <span id="nome-utilizador" class="tag-utilizador"></span>
+                <button class="sair" id="btn-sair">Sair</button>
+            </div>
+        </div>
+        <div id="mensagem" class="mensagem"></div>
+        <!-- Formulário para criar nova task -->
+        <div class="formulario-nova-task">
+            <input type="text" id="nova-task" placeholder="Escreve uma nova tarefa..." />
+            <input type="text" id="description" placeholder="Escreva um descrição para a tarefa" />
+            <label for="priority">Prioridade:</label>
+                <select name="priority" id="priority">
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+            <label for="completed">Completo:</label>
+                <select name="completed" id="completed">
+                    <option value="true">true</option>
+                    <option value="false">false</option>
+                </select>
+
+            <button id="btn-adicionar">Adicionar</button>
+        </div>
+
+        <!-- Lista de tasks (preenchida pelo JavaScript) -->
+        <ul id="lista-tasks" class="lista-tasks">
+            <li class="vazia">A carregar tarefas...</li>
+        </ul>
+    </div>
+    <script src="tasks.js"></script>
+</body>
+
+</html>

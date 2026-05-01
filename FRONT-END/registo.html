@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registar - API Tasks</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <div class="cartao">
+        <h1>Criar conta</h1>
+        <p class="subtitulo">Preenche os campos para te registares.</p> 
+        <!-- Caixa de mensagem (erro ou sucesso) -->
+        <div id="mensagem" class="mensagem">
+        </div>
+        <form id="form-registo">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" placeholder="O teu nome" required />
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="email@exemplo.com" required />
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Mínimo 6 caracteres" required />
+            <button type="submit" id="btn-registar">Criar conta</button>
+        </form>
+        <div class="ligacao"> Já tens conta? <a href="login.html">Entrar</a> </div>
+    </div>
+    <script src="registo.js"></script>
+</body>
+
+</html>
