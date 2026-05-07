@@ -152,7 +152,8 @@ app.get("/tasks/:id", authenticateToken, async (req, res, next) => {
         const task = await prisma.Task.findFirst({
             where: {
                 userId: req.user.id,
-                id: id }
+                id: id
+            }
         })
         if (!task) {
             return res.status(404).json({ message: "A tarefa não existe, verifique o id" })
@@ -200,7 +201,8 @@ app.put("/tasks/:id", authenticateToken, async (req, res, next) => {
         const task = await prisma.Task.update({
             where: {
                 id: id,
-                userId: req.user.id },
+                userId: req.user.id
+            },
             data: {
                 title,
                 priority,
@@ -223,9 +225,10 @@ app.delete("/tasks/:id", authenticateToken, async (req, res, next) => {
         console.log(req.user)
         const id = req.params.id
         const task = await prisma.Task.delete({
-            where: { 
+            where: {
                 id: id,
-                userId: req.user.id }
+                userId: req.user.id
+            }
         })
         res.status(200).json({ message: "A tarefa foi deletado com sucesso" })
     }
